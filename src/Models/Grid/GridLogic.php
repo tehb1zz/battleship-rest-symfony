@@ -119,8 +119,6 @@ public function placementConstraints(iShip $ship) : bool
             self::$errormessage = 'Coordinates already taken'; 
             return false;
         }
-        echo $x . "<br>";
-        echo $y . "<br>";
     }
 
     return true;
