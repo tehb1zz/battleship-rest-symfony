@@ -51,7 +51,7 @@ class Statehandler
         return $oldGrid;
     }
 
-    public function getAiGrid()
+    public function getAiGrid(): GridLogic
     {
         $oldAiGrid= $this->getUnserializedGrid($this->aiGridPath);
         if(!$oldAiGrid)
@@ -79,7 +79,7 @@ class Statehandler
         else return null;
     }
 
-    public function saveSerializedGrid($grid, $path)
+    public function saveSerializedGrid($grid, $path): void
     {
         file_put_contents($path,serialize($grid));
     }

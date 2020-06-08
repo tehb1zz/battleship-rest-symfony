@@ -49,11 +49,8 @@ class AiGrid
                     }
                 }
             }
-        }  
-        if(!$aigrid->allShipsPlaced()) 
-        {
-            throw new Exception('Computer is not ready');
-        }  
+        }
+
         return $aigrid;
     }
 
@@ -66,7 +63,7 @@ class AiGrid
      */
     $alignment = ['right','down'];
 
-    return new $shipType(random_int(1,10),random_int(1,10),array_rand($alignment));
+    return new $shipType(random_int(1,10),random_int(1,10),$alignment[random_int(0,1)]);
     }
 
 

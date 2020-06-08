@@ -32,7 +32,7 @@ abstract class aShip implements iShip
 
 
 
-    public function __construct(int $x,int $y,string $alignment)
+    public function __construct( $x, $y, $alignment)
     {
         $this->x = $x;
         $this->y = $y;
@@ -44,7 +44,8 @@ abstract class aShip implements iShip
         if($this->alignment === iShip::RIGHT)
         {
             return true;
-        } else {
+        } else if($this->alignment === iShip::DOWN)
+        {
             return false;
         }
     }

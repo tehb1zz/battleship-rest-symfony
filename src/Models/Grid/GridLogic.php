@@ -20,6 +20,13 @@ protected $grid = [];
 */
 protected $ships = [];
 
+/**
+* @return string
+*/
+public static $errormessage = '';
+
+
+
 public function __construct() 
 {
 
@@ -54,17 +61,19 @@ public function shipPlacement(iShip $ship): bool
 {
     if(!$this->placementConstraints($ship))
     {
-        throw new InvalidArgumentException();
+        return false;
     }
 
     $x = $ship->getX();
     $y = $ship->getY();
 
-    for($i = $y; $i <= $ship->getSize() +$y -1; $i++)
+    for($i = $y; $i <= $ship->getSize() +$y - 1; $i++)
     {
         if($ship->horizontal())
         {
-            $ship->horizontal() ? $this->grid[$x][$i] = $ship->getName() : $this->grid[$i][$y] = $ship->getName();
+            $this->grid[$x][$i] = $ship->getName(); 
+        } else {
+            $this->grid[$i][$y] = $ship->getName();
         }
     }
 
@@ -78,20 +87,41 @@ public function shipPlacement(iShip $ship): bool
 public function placementConstraints(iShip $ship) : bool
 {
 
-    $x = $ship->getX();
-    $y = $ship->getY();
-
     if($this->allShipsPlaced()) return false;
-    if(array_key_exists($ship->getName(), $this->ships)) throw new Exception('Ship with this name already placed');
-    if(!$this->inbounds($ship)) throw new Exception('Ship was not placed inbounds');
-    if($this->checkForShipOnCoord($ship->getX(),$ship->getY()) instanceof iShip) throw new Exception('Coordinates already taken');
+    if(array_key_exists($ship->getName(), $this->ships)) 
+    {
+        self::$errormessage = 'Ship with the name: ' . $ship->getName() .' already placed'; 
+        return false;
+    }
+    
+    if(!$this->inbounds($ship)) 
+    {
+        self::$errormessage = 'Ship was not placed inbounds'; 
+        return false;
+    }
+    if($this->checkForShipOnCoord($ship->getX(),$ship->getY()) instanceof iShip) 
+    {
+        self::$errormessage = 'Coordinates already taken'; 
+        return false;
+    }
+
+
 
     for($i=0; $i < $ship->getSize(); $i++)
     {
-        ($ship->horizontal())? $y =+ $i : $x =+ $i;
-    }
+        $x = $ship->getX();
+        $y = $ship->getY();
+        ($ship->horizontal())? $y += $i : $x += $i;
+    
 
-    if($this->checkForShipOnCoord($x,$y)) throw new Exception('Coordinates already taken');
+        if($this->checkForShipOnCoord($x,$y) != NULL)
+        {
+            self::$errormessage = 'Coordinates already taken'; 
+            return false;
+        }
+        echo $x . "<br>";
+        echo $y . "<br>";
+    }
 
     return true;
 }

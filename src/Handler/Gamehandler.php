@@ -10,7 +10,6 @@ use App\Models\Ships\Battleship;
 use App\Models\Ships\Cruiser;
 use App\Models\Ships\Submarine;
 use App\Models\Ships\Destroyer;
-use Exception;
 
 class Gamehandler
 {
@@ -24,11 +23,6 @@ class Gamehandler
     * @var GridLogic 
     */
     private $aigrid;
-
-    /*
-    * @var iShip; 
-    */
-    private $ship;
 
     /*
     * @var bool 
@@ -47,19 +41,26 @@ class Gamehandler
         $this->aigrid = $statehandler->getAiGrid();
     }
 
-    public function placeOwnShip(iShip $ship) 
+    public function placeOwnShip(iShip $ship): bool
     {
-        $this->owngrid->shipPlacement($ship);
-        $this->statehandler->saveOwnGrid($this->owngrid);
+        if($this->owngrid->shipPlacement($ship))
+        {
+            $this->statehandler->saveOwnGrid($this->owngrid);
+            return true;
+        } else {
+            return false;
+        }
+
+
     }
 
     public function placeShot($x,$y) 
     {
-     /*   if(!$this->getOwnGrid()->allShipsPlaced())
+        if(!$this->getOwnGrid()->allShipsPlaced())
         {
-            throw new Exception('All Ships must be placed before shooting');
+            return [ 'errormessage' => 'All Ships must be placed before shooting' ];
         }
-*/
+
         $ownshot = $this->aigrid->fireOnGrid($x,$y);
         $ownhit = $ownshot instanceof iShip;
 

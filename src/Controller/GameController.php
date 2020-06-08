@@ -5,12 +5,15 @@ namespace App\Controller;
 use App\Handler\Gamehandler;
 use App\Handler\Statehandler;
 use App\Models\Grid\AiGrid;
+use App\Models\Grid\GridLogic;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
+
+set_time_limit(5);
 
 /**
  * @Route("/api")
@@ -89,24 +92,27 @@ class GameController extends AbstractController
         $shipModel = $this->gamehandler->getShipModelByName($shiptype);
         $newship = new $shipModel((int) $x,(int) $y,(string) $direction);
 
-        $this->gamehandler->placeOwnShip($newship);
-        return new JsonResponse([
-            'message' =>  'ship successfully placed',
-            "links" =>
-            [
-                'self' =>
-                [ 
-                    'href' => 'http://' . $_SERVER["HTTP_HOST"] . '/api/place/',
-                    'method' => 'POST'
-                ],
-                'shoot' =>
-                [ 
-                    'href' => 'http://' . $_SERVER["HTTP_HOST"] . '/api/shoot/',
-                    'method' => 'POST'
-                ]
-            ]     
-        ],201);
-    
+        if(!$this->gamehandler->placeOwnShip($newship))
+        {
+            return new JsonResponse(['errormessage' => GridLogic::$errormessage]);
+        } else {
+            return new JsonResponse([
+                'message' =>  'ship successfully placed',
+                "links" =>
+                [
+                    'self' =>
+                    [ 
+                        'href' => 'http://' . $_SERVER["HTTP_HOST"] . '/api/place/',
+                        'method' => 'POST'
+                    ],
+                    'shoot' =>
+                    [ 
+                        'href' => 'http://' . $_SERVER["HTTP_HOST"] . '/api/shoot/',
+                        'method' => 'POST'
+                    ]
+                ]     
+            ],201);
+        }
     }
 
     /**

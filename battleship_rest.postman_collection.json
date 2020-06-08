@@ -53,40 +53,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Jun 2020 09:40:19 GMT"
-						},
-						{
-							"key": "X-Debug-Token",
-							"value": "87ce5e"
-						},
-						{
-							"key": "X-Debug-Token-Link",
-							"value": "http://127.0.0.1:8000/_profiler/87ce5e"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.4.2"
-						},
-						{
-							"key": "X-Robots-Tag",
-							"value": "noindex"
-						},
-						{
-							"key": "Content-Length",
-							"value": "177"
-						}
-					],
 					"cookie": [],
 					"body": "{\n    \"message\": \"Game initialised\",\n    \"links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8000/api/\",\n            \"method\": \"GET\"\n        },\n        \"place\": {\n            \"href\": \"http://127.0.0.1:8000/api/place/\",\n            \"method\": \"POST\"\n        }\n    }\n}"
 				}
@@ -197,44 +163,6 @@
 					"status": "Created",
 					"code": 201,
 					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Jun 2020 09:42:50 GMT"
-						},
-						{
-							"key": "Set-Cookie",
-							"value": "sf_redirect=%7B%22token%22%3A%22dd750a%22%2C%22route%22%3A%22place%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22App%5C%5CController%5C%5CGameController%22%2C%22method%22%3A%22place%22%2C%22file%22%3A%22C%3A%5C%5Cxampp%5C%5Chtdocs%5C%5CSymfony%5C%5Cbattleship_rest%5C%5Csrc%5C%5CController%5C%5CGameController.php%22%2C%22line%22%3A80%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D; path=/; httponly; samesite=lax"
-						},
-						{
-							"key": "X-Debug-Token",
-							"value": "dd750a"
-						},
-						{
-							"key": "X-Debug-Token-Link",
-							"value": "http://127.0.0.1:8000/_profiler/dd750a"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.4.2"
-						},
-						{
-							"key": "X-Robots-Tag",
-							"value": "noindex"
-						},
-						{
-							"key": "Content-Length",
-							"value": "193"
-						}
-					],
 					"cookie": [],
 					"body": "{\n    \"message\": \"ship successfully placed\",\n    \"links\": {\n        \"self\": {\n            \"href\": \"http://127.0.0.1:8000/api/place/\",\n            \"method\": \"POST\"\n        },\n        \"shoot\": {\n            \"href\": \"http://127.0.0.1:8000/api/shoot/\",\n            \"method\": \"POST\"\n        }\n    }\n}"
 				}
@@ -315,40 +243,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Jun 2020 09:48:56 GMT"
-						},
-						{
-							"key": "X-Debug-Token",
-							"value": "253bde"
-						},
-						{
-							"key": "X-Debug-Token-Link",
-							"value": "http://127.0.0.1:8000/_profiler/253bde"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.4.2"
-						},
-						{
-							"key": "X-Robots-Tag",
-							"value": "noindex"
-						},
-						{
-							"key": "Content-Length",
-							"value": "300"
-						}
-					],
 					"cookie": [],
 					"body": "{\n    \"owndata\": {\n        \"gameover\": false,\n        \"wracked\": false,\n        \"hit\": false,\n        \"links\": {\n            \"owngrid\": {\n                \"href\": \"http://127.0.0.1:8000/api/owngrid/\",\n                \"method\": \"GET\"\n            }\n        }\n    },\n    \"aidata\": {\n        \"gameover\": false,\n        \"wracked\": false,\n        \"hit\": false,\n        \"aix\": 4,\n        \"aiy\": 1,\n        \"links\": {\n            \"aigrid\": {\n                \"href\": \"http://127.0.0.1:8000/api/aigrid/\",\n                \"method\": \"GET\"\n            }\n        }\n    }\n}"
 				}
@@ -399,40 +293,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Jun 2020 09:50:24 GMT"
-						},
-						{
-							"key": "X-Debug-Token",
-							"value": "5282ad"
-						},
-						{
-							"key": "X-Debug-Token-Link",
-							"value": "http://127.0.0.1:8000/_profiler/5282ad"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.4.2"
-						},
-						{
-							"key": "X-Robots-Tag",
-							"value": "noindex"
-						},
-						{
-							"key": "Content-Length",
-							"value": "972"
-						}
-					],
 					"cookie": [],
 					"body": "{\n    \"1\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"2\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"3\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"4\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"5\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"6\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"7\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"8\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"9\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"10\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    }\n}"
 				}
@@ -483,40 +343,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Jun 2020 09:51:46 GMT"
-						},
-						{
-							"key": "X-Debug-Token",
-							"value": "42e31c"
-						},
-						{
-							"key": "X-Debug-Token-Link",
-							"value": "http://127.0.0.1:8000/_profiler/42e31c"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.4.2"
-						},
-						{
-							"key": "X-Robots-Tag",
-							"value": "noindex"
-						},
-						{
-							"key": "Content-Length",
-							"value": "972"
-						}
-					],
 					"cookie": [],
 					"body": "{\n    \"1\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"2\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"3\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"4\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"5\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"6\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"7\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"8\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"9\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    },\n    \"10\": {\n        \"1\": null,\n        \"2\": null,\n        \"3\": null,\n        \"4\": null,\n        \"5\": null,\n        \"6\": null,\n        \"7\": null,\n        \"8\": null,\n        \"9\": null,\n        \"10\": null\n    }\n}"
 				}
@@ -567,40 +393,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Cache-Control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 03 Jun 2020 09:54:35 GMT"
-						},
-						{
-							"key": "X-Debug-Token",
-							"value": "958e80"
-						},
-						{
-							"key": "X-Debug-Token-Link",
-							"value": "http://127.0.0.1:8000/_profiler/958e80"
-						},
-						{
-							"key": "X-Powered-By",
-							"value": "PHP/7.4.2"
-						},
-						{
-							"key": "X-Robots-Tag",
-							"value": "noindex"
-						},
-						{
-							"key": "Content-Length",
-							"value": "32"
-						}
-					],
 					"cookie": [],
 					"body": "{\n    \"message\": \"Game was restarted\"\n}"
 				}
